@@ -24,35 +24,37 @@ function FormsPage() {
   };
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    setStatus("Envoi en cours...");
+  event.preventDefault();
+  setStatus("Envoi en cours...");
 
-    try {
-      await fetch("/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: encode({
-          "form-name": "contact-demo",
-          ...formData,
-        }),
-      });
+  try {
+    const response = await fetch("/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: encode({
+        "form-name": "contact-demo",
+        ...formData,
+      }),
+    });
 
-      setStatus(
-        "Message envoyé. Après le déploiement, il sera visible dans Netlify Dashboard > Forms."
-      );
-
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-        "bot-field": "",
-      });
-    } catch (error) {
-      setStatus("Erreur pendant l’envoi. Teste le formulaire depuis le lien Netlify déployé.");
+    if (!response.ok) {
+      throw new Error("Form submission failed");
     }
-  };
+
+    setStatus("Message envoyé avec succès. Vérifie Netlify Dashboard > Forms.");
+
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+      "bot-field": "",
+    });
+  } catch (error) {
+    setStatus("Erreur : le formulaire n’a pas été enregistré par Netlify.");
+  }
+};
 
   return (
     <section className="page-card">
