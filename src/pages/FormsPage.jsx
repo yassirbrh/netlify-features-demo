@@ -48,7 +48,7 @@ function FormsPage() {
         build grâce au fichier <strong>public/forms.html</strong>.
       </p>
 
-      <form className="demo-form" name="contact-demo" onSubmit={handleSubmit}>
+      <form className="demo-form" name="contact-demo" onSubmit={handleSubmit} netlify>
         <input type="hidden" name="form-name" value="contact-demo" />
 
         <label>
