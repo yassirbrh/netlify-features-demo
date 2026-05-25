@@ -1,0 +1,294 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+}
+
+.sidebar {
+  width: 295px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0f172a 0%, #12343b 100%);
+  color: #fff;
+  padding: 24px 18px;
+  position: sticky;
+  top: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 22px;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: #38bdf8;
+  color: #082f49;
+  font-weight: 900;
+  font-size: 24px;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: -0.5px;
+}
+
+.brand p {
+  margin: 4px 0 0;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-links a {
+  color: #dbeafe;
+  text-decoration: none;
+  padding: 11px 13px;
+  border-radius: 12px;
+  transition: 0.2s;
+  font-size: 15px;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.nav-links a.active {
+  background: #38bdf8;
+  color: #082f49;
+  font-weight: 800;
+}
+
+.main-content {
+  flex: 1;
+  padding: 42px;
+}
+
+.page {
+  max-width: 980px;
+  background: white;
+  border-radius: 24px;
+  padding: 34px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.1);
+}
+
+.page-header {
+  margin-bottom: 22px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #e0f2fe;
+  color: #075985;
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.page h2,
+.page h1 {
+  margin: 0 0 14px;
+  color: #0f172a;
+  font-size: 34px;
+  line-height: 1.15;
+}
+
+.page h3 {
+  color: #0f172a;
+  margin-top: 28px;
+}
+
+.page p,
+.page li {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #334155;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+}
+
+.card p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.demo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 24px;
+  max-width: 560px;
+}
+
+.demo-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.demo-form input,
+.demo-form textarea {
+  padding: 13px 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  font-size: 16px;
+  background: #ffffff;
+}
+
+.demo-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.demo-button,
+.demo-form button,
+.button-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  background: #0f172a;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 18px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.demo-button:hover,
+.demo-form button:hover,
+.button-link:hover {
+  background: #1e293b;
+}
+
+.status-message {
+  margin-top: 18px;
+  padding: 13px 15px;
+  background: #e0f2fe;
+  border-radius: 12px;
+  color: #075985;
+  font-weight: 600;
+}
+
+.warning-message {
+  margin-top: 18px;
+  padding: 13px 15px;
+  background: #fff7ed;
+  border-radius: 12px;
+  color: #9a3412;
+  font-weight: 600;
+}
+
+.code-result,
+pre {
+  margin-top: 20px;
+  padding: 18px;
+  background: #0f172a;
+  color: #e2e8f0;
+  border-radius: 14px;
+  overflow-x: auto;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.info-box {
+  margin-top: 22px;
+  padding: 20px;
+  background: #f8fafc;
+  border-left: 6px solid #38bdf8;
+  border-radius: 16px;
+}
+
+.info-box h3 {
+  margin-top: 0;
+}
+
+.steps {
+  padding-left: 20px;
+}
+
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.kpi {
+  background: #ecfeff;
+  border: 1px solid #a5f3fc;
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.kpi strong {
+  display: block;
+  font-size: 26px;
+  color: #0e7490;
+}
+
+.kpi span {
+  color: #155e75;
+  font-weight: 700;
+}
+
+@media (max-width: 860px) {
+  .app-shell {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    position: static;
+  }
+
+  .main-content {
+    padding: 22px;
+  }
+
+  .grid,
+  .kpi-row {
+    grid-template-columns: 1fr;
+  }
+}
