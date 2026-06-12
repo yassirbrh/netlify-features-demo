@@ -1,5 +1,4 @@
 ---
-title: "Accueil"
+title: Accueil
 ---
-
-Contenu exemple pour montrer le principe d’un CMS.
+Hello MSID
