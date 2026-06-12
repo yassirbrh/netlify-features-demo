@@ -32,10 +32,6 @@ function Home() {
         </div>
       </div>
 
-      <p className="note">
-        Le but est de garder une démonstration courte, claire et adaptée à une
-        présentation de cinq minutes.
-      </p>
     </section>
   );
 }
