@@ -11,12 +11,6 @@ function ConclusionPage() {
         les variables d’environnement, les previews de déploiement et les
         intégrations.
       </p>
-
-      <p className="note">
-        Pour une présentation courte, le plus important est de montrer que
-        Netlify simplifie la mise en ligne et l’automatisation d’une application
-        web.
-      </p>
     </section>
   );
 }
